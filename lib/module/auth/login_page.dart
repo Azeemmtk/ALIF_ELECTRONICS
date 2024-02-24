@@ -6,6 +6,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../widgets/custom_button.dart';
 import '../../widgets/custom_text_field.dart';
 
 class loginpage extends StatelessWidget {
@@ -40,7 +41,7 @@ class loginpage extends StatelessWidget {
             height: 30,
           ),
           CustomTextField(
-            suffixicon: Icon(Icons.visibility),
+            suffixicon: const Icon(Icons.visibility),
             controller: _passwordController,
             hintText: "Enter password",
           ),
@@ -58,7 +59,7 @@ class loginpage extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          Center(
+          const Center(
             child: SizedBox(
               width: 300,
               child: custom_button(),
@@ -85,18 +86,3 @@ class loginpage extends StatelessWidget {
   }
 }
 
-class custom_button extends StatelessWidget {
-  const custom_button({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
-      child:
-          const Text("LOG IN", style: TextStyle(color: Colors.white)),
-    );
-  }
-}
