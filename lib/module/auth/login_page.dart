@@ -40,6 +40,7 @@ class loginpage extends StatelessWidget {
             height: 30,
           ),
           CustomTextField(
+            suffixicon: Icon(Icons.visibility),
             controller: _passwordController,
             hintText: "Enter password",
           ),
@@ -60,12 +61,7 @@ class loginpage extends StatelessWidget {
           Center(
             child: SizedBox(
               width: 300,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
-                child:
-                    const Text("LOG IN", style: TextStyle(color: Colors.white)),
-              ),
+              child: custom_button(),
             ),
           ),
           Row(
@@ -86,5 +82,21 @@ class loginpage extends StatelessWidget {
         ],
       ),
     ));
+  }
+}
+
+class custom_button extends StatelessWidget {
+  const custom_button({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.amber),
+      child:
+          const Text("LOG IN", style: TextStyle(color: Colors.white)),
+    );
   }
 }
