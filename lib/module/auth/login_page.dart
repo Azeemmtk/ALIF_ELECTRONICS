@@ -37,7 +37,7 @@ class loginpage extends StatelessWidget {
           Container(
             child: CustomTextField(
               controller: _emailCntroller,
-              hintText: "Enter Email",
+              hintText: "Enter email",
             ),
           ),
           const SizedBox(
