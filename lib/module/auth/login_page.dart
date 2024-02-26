@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:alif_electronics/module/auth/customer_reistration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -26,16 +27,18 @@ class loginpage extends StatelessWidget {
           const SizedBox(
             height: 70,
           ),
-          const Text(
+           const Text(
             "Sign In",
             style: TextStyle(fontFamily: 'circular_bold', fontSize: 30),
           ),
           const SizedBox(
             height: 130,
           ),
-          CustomTextField(
-            controller: _emailCntroller,
-            hintText: "Enter email",
+          Container(
+            child: CustomTextField(
+              controller: _emailCntroller,
+              hintText: "Enter email",
+            ),
           ),
           const SizedBox(
             height: 30,
@@ -75,7 +78,9 @@ class loginpage extends StatelessWidget {
                 ),
               ),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>  Customer_reg())  );
+                  },
                   child: const Text("Register",
                       style: TextStyle(color: Colors.amber)))
             ],
@@ -85,4 +90,3 @@ class loginpage extends StatelessWidget {
     ));
   }
 }
-

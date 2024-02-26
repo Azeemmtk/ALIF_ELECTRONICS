@@ -21,6 +21,9 @@ class CustomTextField extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(40)),
               borderSide: BorderSide(color: CupertinoColors.inactiveGray)),
           hintText: hintText,
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: CupertinoColors.activeBlue),
+              borderRadius: BorderRadius.all(Radius.circular(40))),
           suffixIcon: suffixicon,
           hintStyle:
               TextStyle(color: CupertinoColors.inactiveGray.withOpacity(0.5))),
