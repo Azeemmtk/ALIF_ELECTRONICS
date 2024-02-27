@@ -71,7 +71,9 @@ class Customer_reg extends StatelessWidget {
               const SizedBox(height: 20,),
               Center(
                 child: SizedBox(width: 300,
-                    child: custom_button()),
+                    child: custom_button(onpress: () {
+
+                    },txt: "SIGN UP",)),
               )
             ],
           ),

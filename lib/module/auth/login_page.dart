@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:alif_electronics/module/auth/customer_reistration.dart';
+import 'package:alif_electronics/module/auth/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -27,7 +28,7 @@ class loginpage extends StatelessWidget {
           const SizedBox(
             height: 70,
           ),
-           const Text(
+          const Text(
             "Sign In",
             style: TextStyle(fontFamily: 'circular_bold', fontSize: 30),
           ),
@@ -49,23 +50,33 @@ class loginpage extends StatelessWidget {
             hintText: "Enter password",
           ),
           const SizedBox(
-            height: 10,
+            height: 0,
           ),
-          const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "Forget password",
-              style: TextStyle(fontFamily: 'circular_bold', fontSize: 15),
-              textAlign: TextAlign.left,
-            ),
-          ),
+          Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  "Forget password",
+                  style: TextStyle(fontFamily: 'circular_bold',color: Colors.amber, fontSize: 15),
+                  textAlign: TextAlign.left,
+                ),
+              )),
           const SizedBox(
             height: 50,
           ),
-          const Center(
+          Center(
             child: SizedBox(
               width: 300,
-              child: custom_button(),
+              child: custom_button(
+                onpress: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => homepage()));;
+                },
+                txt: "LOG IN",
+              ),
             ),
           ),
           Row(
@@ -79,7 +90,10 @@ class loginpage extends StatelessWidget {
               ),
               TextButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>  Customer_reg())  );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Customer_reg()));
                   },
                   child: const Text("Register",
                       style: TextStyle(color: Colors.amber)))
