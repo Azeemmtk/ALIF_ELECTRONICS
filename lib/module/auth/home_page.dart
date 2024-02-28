@@ -1,4 +1,5 @@
 import 'package:alif_electronics/widgets/custom_text_field.dart';
+import 'package:alif_electronics/widgets/custon_container.dart';
 import 'package:flutter/material.dart';
 
 class homepage extends StatelessWidget {
@@ -32,10 +33,12 @@ class homepage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body:
+      SingleChildScrollView(
+      child:Column(
         children: [
           Container(
-            height: 250,
+            height: 230,
             child: Stack(
               children: [
                 Container(
@@ -60,19 +63,60 @@ class homepage extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                    bottom: 0,
-                    left: 20,
-                    right: 20,
+                  bottom: 0,
+                  left: 20,
+                  right: 20,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
                     child: Image.asset(
-                      "asset/image/logo.png",
+                      "asset/image/add.png",
                       width: 200,
-                      height: 150,
-                    ))
+                      height: 130,
+                    ),
+                  ),
+                  //  child: Image.asset(
+                  //    "asset/image/add.png",
+                  //    width: 200,
+                  //    height: 130,
+                )
               ],
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text("Select Service"),
+                    SizedBox(
+                      width: 229,
+                    ),
+                    Text(
+                      "See all",
+                      style: TextStyle(color: Colors.black.withOpacity(0.5)),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20,),
+                Column(children: [
+                  Row(
+                    children: [
+                      custom_container(image: "asset/image/pc.png",text: "Tv Repair",),
+                      SizedBox(width: 20,),
+                      custom_container(image: "asset/image/crome.png", text: "Selling")
+                    ],
+                  )
+                ],)
+              ],
+            ),
+          )
         ],
       ),
-    );
+      ));
   }
 }
+
