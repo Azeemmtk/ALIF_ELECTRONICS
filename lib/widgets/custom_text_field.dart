@@ -6,7 +6,7 @@ class CustomTextField extends StatelessWidget {
       {super.key,
       required this.controller,
       required this.hintText,
-      this.suffixicon, this.prefixicon, this.fillcolor, this.filled});
+      this.suffixicon, this.prefixicon, this.fillcolor, this.filled,});
 
   final TextEditingController controller;
   final String hintText;
@@ -14,6 +14,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? prefixicon;
   final fillcolor;
   final filled;
+
 
   @override
   Widget build(BuildContext context) {
