@@ -1,8 +1,6 @@
 import 'package:alif_electronics/widgets/custom_text_field.dart';
 import 'package:alif_electronics/widgets/custon_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../../widgets/custom servicecontainer.dart';
 
@@ -96,14 +94,13 @@ class homepage extends StatelessWidget {
                     children: [
                       const Text("Select Service"),
                       const SizedBox(
-                        width: 229,
+                        width: 213,
                       ),
-                      TextButton(onPressed: () {
-
-                      }, child:  Text("See all",
-                          style:
-                          TextStyle(color: Colors.black.withOpacity(0.5)))
-                      ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text("See all",
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.5)))),
                     ],
                   ),
                   const SizedBox(
@@ -141,12 +138,11 @@ class homepage extends StatelessWidget {
                           const SizedBox(
                             width: 213,
                           ),
-                        TextButton(onPressed: () {
-
-                        }, child:  Text("See all",
-                            style:
-                            TextStyle(color: Colors.black.withOpacity(0.5)))
-                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text("See all",
+                                  style: TextStyle(
+                                      color: Colors.black.withOpacity(0.5)))),
                         ],
                       ),
                       const SizedBox(
@@ -248,7 +244,9 @@ class homepage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(width: 10,),
+                            SizedBox(
+                              width: 10,
+                            ),
                             Container(
                               height: 120,
                               width: 360,
@@ -358,26 +356,42 @@ class homepage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   const SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        custom_repair_containr(image: "asset/image/repair.png",
+                        custom_repair_containr(
+                          image: "asset/image/repair.png",
                           text: "TV Repair",
-                          price: "200",),
-                        SizedBox(width: 10,),
-                        custom_repair_containr(image: "asset/image/repair.png",
+                          price: "200",
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        custom_repair_containr(
+                          image: "asset/image/repair.png",
                           text: "TV Repair",
-                          price: "200",),
-                        SizedBox(width: 10,),
-                        custom_repair_containr(image: "asset/image/repair.png",
+                          price: "200",
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        custom_repair_containr(
+                          image: "asset/image/repair.png",
                           text: "TV Repair",
-                          price: "200",),
-                        SizedBox(width: 10,),
-                        custom_repair_containr(image: "asset/image/repair.png",
+                          price: "200",
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        custom_repair_containr(
+                          image: "asset/image/repair.png",
                           text: "TV Repair",
-                          price: "200",)
+                          price: "200",
+                        )
                       ],
                     ),
                   )
@@ -415,4 +429,3 @@ class homepage extends StatelessWidget {
     );
   }
 }
-
