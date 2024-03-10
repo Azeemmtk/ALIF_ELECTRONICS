@@ -14,7 +14,7 @@ class home_technician extends StatelessWidget {
           children: [
             Icon(Icons.menu_outlined),
             SizedBox(
-              width: 90,
+              width: 89,
             ),
             SizedBox(
               width: 5,
